@@ -11,7 +11,9 @@ class ServicesTableSeeder extends Seeder
      */
     public function run()
     {
-        $services = ['Замесить глину', 'Сделать кусь', 'Погладить по головке'];
+        $services = ['Дизайн и проектирование', 'Разработка',
+            'Оптимизация и продвижение', 'Сопровождение', 'Продвижение в SMM',
+            'Управление репутацией'];
         foreach ($services as $service) {
             DB::table('services')->insert([
                 'service' => $service,
