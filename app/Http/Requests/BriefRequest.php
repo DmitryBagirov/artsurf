@@ -24,17 +24,17 @@ class BriefRequest extends FormRequest
     public function rules()
     {
         return [
-            'name' => 'required',
-            'organization' => 'required',
+            'name' => 'string|max:100|required',
+            'organization' => 'string|max:255|required',
             'services' => 'required',
-            'purposes' => 'required',
-            'description' => '',
-            'files' => '',
-            'website' => '',
-            'deadline' => '',
-            'email' => 'required|email',
-            'phone' => 'regex:/^\+7\ \(\d{3}\)\ \d{3}\-\d{2}\-\d{2}$/', //^(\+7|[7,8]\ ?)(\d{10}|(\(?\d{3}\)?\ ?\d{3}[\-,\ ]?\d{2}[\-,\ ]?\d{2}))$
-            'references' => 'required',
+            'purposes' => 'string|max:5000|required',
+            'description' => 'string|max:5000',
+            'files' => 'file', //file
+            'website' => 'string|max:255|string',
+            'deadline' => 'string|',
+            'email' => 'string|required|email',
+            'phone' => 'string|regex:/^\+7\ \(\d{3}\)\ \d{3}\-\d{2}\-\d{2}$/', //^(\+7|[7,8]\ ?)(\d{10}|(\(?\d{3}\)?\ ?\d{3}[\-,\ ]?\d{2}[\-,\ ]?\d{2}))$
+            'references' => 'string|required',
         ];
     }
 }
