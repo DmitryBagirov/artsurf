@@ -35,6 +35,7 @@ class BriefEmail extends Mailable
             $this->attach($file->getRealPath());
             break;
         }
+        dd($this->attachments);
         return $this->view('briefEmail');
     }
 }

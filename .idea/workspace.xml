@@ -2,16 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c23aea4c-f26f-47e6-ac95-c874ad758eb1" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Brief.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Brief.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/BriefController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/BriefController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Mail/Brief.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Mail/BriefEmail.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2018_08_06_171436_services.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2018_08_06_191047_briefs.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2018_08_06_191047_briefs.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeds/ServicesTableSeeder.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/welcome.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/test.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Mail/BriefEmail.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Mail/BriefEmail.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -53,7 +44,7 @@
           <entry key="dummy" value="20" />
           <entry key="env" value="31" />
           <entry key="example" value="6" />
-          <entry key="php" value="2134" />
+          <entry key="php" value="2160" />
           <entry key="txt" value="126" />
         </counts>
       </usages-collector>
@@ -61,7 +52,7 @@
         <counts>
           <entry key=".env file" value="31" />
           <entry key="Blade" value="203" />
-          <entry key="PHP" value="1931" />
+          <entry key="PHP" value="1957" />
           <entry key="PLAIN_TEXT" value="152" />
         </counts>
       </usages-collector>
@@ -120,8 +111,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Mail/BriefEmail.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="248">
-              <caret line="34" column="25" lean-forward="true" selection-start-line="34" selection-start-column="25" selection-end-line="34" selection-end-column="25" />
+            <state relative-caret-position="380">
+              <caret line="40" column="1" lean-forward="true" selection-start-line="40" selection-start-column="1" selection-end-line="40" selection-end-column="1" />
               <folding>
                 <element signature="e#28#57#0#PHP" expanded="true" />
               </folding>
@@ -186,9 +177,9 @@
         <option value="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" />
         <option value="$PROJECT_DIR$/app/Mail/Brief.php" />
         <option value="$PROJECT_DIR$/.env" />
-        <option value="$PROJECT_DIR$/app/Mail/BriefEmail.php" />
         <option value="$PROJECT_DIR$/routes/web.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/BriefController.php" />
+        <option value="$PROJECT_DIR$/app/Mail/BriefEmail.php" />
       </list>
     </option>
   </component>
@@ -401,7 +392,7 @@
       <workItem from="1533474340169" duration="854000" />
       <workItem from="1533493215916" duration="6026000" />
       <workItem from="1533569170494" duration="16684000" />
-      <workItem from="1533652641240" duration="8091000" />
+      <workItem from="1533652641240" duration="8335000" />
     </task>
     <task id="LOCAL-00001" summary="disable strict mode">
       <created>1533579804314</created>
@@ -442,7 +433,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="38733000" />
+    <option name="totallyTimeSpent" value="38977000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -652,8 +643,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Mail/BriefEmail.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="248">
-          <caret line="34" column="25" lean-forward="true" selection-start-line="34" selection-start-column="25" selection-end-line="34" selection-end-column="25" />
+        <state relative-caret-position="380">
+          <caret line="40" column="1" lean-forward="true" selection-start-line="40" selection-start-column="1" selection-end-line="40" selection-end-column="1" />
           <folding>
             <element signature="e#28#57#0#PHP" expanded="true" />
           </folding>
