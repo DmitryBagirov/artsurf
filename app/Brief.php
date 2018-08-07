@@ -6,5 +6,5 @@ use Illuminate\Database\Eloquent\Model;
 
 class Brief extends Model
 {
-    //
+    public $timestamps = false;
 }

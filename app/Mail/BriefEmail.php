@@ -7,18 +7,19 @@ use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
 use Illuminate\Contracts\Queue\ShouldQueue;
 
-class Brief extends Mailable
+class BriefEmail extends Mailable
 {
     use Queueable, SerializesModels;
+    private $files;
 
     /**
      * Create a new message instance.
      *
      * @return void
      */
-    public function __construct()
+    public function __construct($files)
     {
-        //
+        $this->files = $files;
     }
 
     /**
@@ -28,12 +29,12 @@ class Brief extends Mailable
      */
     public function build()
     {
-        $this->from("email@domain.com");
+        $this->from("no-reply@artsurf.pro");
         $this->subject("Тема");
-        $this->attach('/path/to/file', [
-            'as' => 'name.pdf',
-            'mime' => 'application/pdf',
-        ]);
+        foreach ($this->files as $file) {
+            $this->attach($file->getRealPath());
+            break;
+        }
         return $this->view('briefEmail');
     }
 }

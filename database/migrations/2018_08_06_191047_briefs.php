@@ -17,17 +17,15 @@ class Briefs extends Migration
             $table->increments('id');
             $table->string('name', 100);
             $table->string('organization', 255);
-            $table->unsignedInteger('service_id');
+            $table->string('services');
             $table->string('purposes', 5000);
             $table->string('description', 5000);
-            $table->binary('files');
+            $table->string('files', 255);
             $table->string('website', 255);
             $table->string('deadline', 1000);
             $table->string('email', 320);
             $table->string('phone', 20);
             $table->string('references', 1000);
-            $table->foreign('service_id')
-                ->references('id')->on('services');
         });
     }
 
