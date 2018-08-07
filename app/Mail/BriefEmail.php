@@ -10,16 +10,16 @@ use Illuminate\Contracts\Queue\ShouldQueue;
 class BriefEmail extends Mailable
 {
     use Queueable, SerializesModels;
-    private $files;
+    private $brief;
 
     /**
      * Create a new message instance.
      *
      * @return void
      */
-    public function __construct($files)
+    public function __construct($brief)
     {
-        $this->files = $files;
+        $this->brief = $brief;
     }
 
     /**
@@ -29,13 +29,13 @@ class BriefEmail extends Mailable
      */
     public function build()
     {
-        $this->from("no-reply@artsurf.pro");
-        $this->subject("Тема");
-        foreach ($this->files as $file) {
-            $this->attach($file->getRealPath());
-            break;
+        $this
+            ->from("no-reply@artsurf.pro", 'Заказ от ' . $this->brief->name)
+            ->subject("Тема");
+        $files = json_decode($this->brief->files);
+        foreach ($files as $file) {
+            $this->attach($file);
         }
-        dd($this->attachments);
-        return $this->view('briefEmail');
+        return $this->view('briefEmail', ['brief' => $this->brief]);
     }
 }

@@ -9,6 +9,11 @@
     </label>
     <br>
     <label>
+        Организация
+        <input type="text" name="organization">
+    </label>
+    <br>
+    <label>
         Услуги
         <input type="text" name="services">
     </label>

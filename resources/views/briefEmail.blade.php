@@ -1,1 +1,11 @@
-<?php
+<div>{{$brief->name}}</div>
+<div>{{$brief->organization}}</div>
+<div>{{$brief->services}}</div>
+<div>{{$brief->purposes}}</div>
+<div>{{$brief->description}}</div>
+<div>{{$brief->files}}</div>
+<div>{{$brief->website}}</div>
+<div>{{$brief->deadline}}</div>
+<div>{{$brief->email}}</div>
+<div>{{$brief->phone}}</div>
+<div>{{$brief->references}}</div>

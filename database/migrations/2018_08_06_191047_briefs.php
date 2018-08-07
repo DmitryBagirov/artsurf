@@ -17,7 +17,7 @@ class Briefs extends Migration
             $table->increments('id');
             $table->string('name', 100);
             $table->string('organization', 255);
-            $table->string('services');
+            $table->string('services', 1000);
             $table->string('purposes', 5000);
             $table->string('description', 5000);
             $table->string('files', 255);

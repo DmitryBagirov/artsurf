@@ -3,6 +3,7 @@
 namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
+use Illuminate\Validation\Rule;
 
 class BriefRequest extends FormRequest
 {
@@ -13,7 +14,7 @@ class BriefRequest extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**
@@ -26,12 +27,12 @@ class BriefRequest extends FormRequest
         return [
             'name' => 'string|max:100|required',
             'organization' => 'string|max:255|required',
-            'services' => 'required|exists:services,services',
+            'services' => 'string|max:1000|required',
             'purposes' => 'string|max:5000|required',
             'description' => 'string|max:5000',
-            'files' => 'file', //file
+            'files.*' => 'file|max:51200',
             'website' => 'string|max:255',
-            'deadline' => 'string|1000',
+            'deadline' => 'string|max:1000',
             'email' => 'string|required|email',
             'phone' => 'string|max:20|regex:/^\+7\ \(\d{3}\)\ \d{3}\-\d{2}\-\d{2}$/', //^(\+7|[7,8]\ ?)(\d{10}|(\(?\d{3}\)?\ ?\d{3}[\-,\ ]?\d{2}[\-,\ ]?\d{2}))$
             'references' => 'string|max:1000|required',
