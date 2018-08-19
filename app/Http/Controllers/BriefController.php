@@ -7,6 +7,7 @@ use App\Http\Requests\BriefRequest;
 use App\Mail\BriefEmail;
 use Illuminate\Http\Request;
 use Mail;
+use PHPUnit\Util\Json;
 
 class BriefController extends Controller
 {
@@ -37,7 +38,6 @@ class BriefController extends Controller
         $brief->files = json_encode($paths);
         $brief->save();
         Mail::to(["hello@artsurf.pro"])->send(new BriefEmail($brief));
-        dd($files);
-		return 'sdf';
+		return response('ok');
 	}
 }

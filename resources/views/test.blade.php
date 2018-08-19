@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
 <body>
-<form action="/brief/send" method="post" enctype="multipart/form-data" >
+<form action="/api/brief/send" method="post" enctype="multipart/form-data" >
     {{ csrf_field() }}
     <label>
         Имя
