@@ -15,17 +15,15 @@ class Briefs extends Migration
     {
         Schema::create('briefs', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('name', 100);
-            $table->string('organization', 255);
-            $table->string('services', 1000);
-            $table->string('purposes', 5000);
-            $table->string('description', 5000);
-            $table->string('files', 255);
-            $table->string('website', 255);
-            $table->string('deadline', 1000);
-            $table->string('email', 320);
-            $table->string('phone', 20);
-            $table->string('references', 1000);
+            $table->string('from', 255);
+            $table->string('services');
+            $table->text('purposes');
+            $table->string('files_description')->nullable();
+            $table->string('website')->nullable();
+            $table->string('deadline')->nullable();
+            $table->string('email', 255);
+            $table->string('phone', 20)->nullable();
+            $table->string('references')->nullable();
         });
     }
 

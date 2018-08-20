@@ -10,6 +10,7 @@ use Illuminate\Contracts\Queue\ShouldQueue;
 class BriefEmail extends Mailable
 {
     use Queueable, SerializesModels;
+
     private $brief;
 
     /**
@@ -17,9 +18,17 @@ class BriefEmail extends Mailable
      *
      * @return void
      */
-    public function __construct($brief)
+    public function __construct($brief, $files = [])
     {
         $this->brief = $brief;
+
+        if (!empty($files)) {
+            foreach ($files as $file) {
+                $this->attach($file, [
+                    'as' => $file->getClientOriginalName()
+                ]);
+            }
+        }
     }
 
     /**
@@ -29,15 +38,10 @@ class BriefEmail extends Mailable
      */
     public function build()
     {
-        $this->from("no-reply@artsurf.pro", 'Заказ от ' . $this->brief->name)
+        $this
+            ->from("no-reply@artsurf.pro", 'Заказ #' . $this->brief->id)
             ->subject("Тема");
-        $files = json_decode($this->brief->files);
-        foreach ($files as $file) {
-            $this->attach($file);
-        }
-        $questions = ["Как Вас зовут?",  "Какую компанию Вы представляете?",
-            "Какие услуги Вам нужны?", "Каковы основные цели Вашего проекта?", "Описание",
-            "Адрес сайта", "Сроки", "Почта", "Телефон", "Откуда вы узнали о нас?"];
-        return $this->view('briefEmail', ['brief' => $this->brief, 'questions' => $questions]);
+
+        return $this->view('brief-email', ['brief' => $this->brief]);
     }
 }
