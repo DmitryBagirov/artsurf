@@ -26,7 +26,7 @@ class BriefRequest extends FormRequest
     {
         return [
             'from' => 'string|max:255|required',
-            'services' => 'string|max:255|required',
+            'services' => 'string|max:255',
             'purposes' => 'string|required',
             'files' => 'nullable',
             'files.*' => 'file|max:51200',
