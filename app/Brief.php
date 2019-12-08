@@ -9,6 +9,7 @@ class Brief extends Model
     public $timestamps = false;
 
     protected $fillable = [
+        'name',
         'from',
         'services',
         'purposes',

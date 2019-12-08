@@ -16,6 +16,7 @@ class BriefController extends Controller
 		
 		$brief
 			->fill($request->only([
+			    'name',
 				'from',
 				'services',
 				'purposes',

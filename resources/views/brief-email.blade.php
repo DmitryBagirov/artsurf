@@ -59,6 +59,6 @@
     @endif
 
     <div style="margin-top: 64px;">
-        — {{ $brief->from }}
+        — {{ $brief->from . ' ' . $brief->name}}
     </div>
 </div>

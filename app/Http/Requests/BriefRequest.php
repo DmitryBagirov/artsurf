@@ -25,17 +25,18 @@ class BriefRequest extends FormRequest
     public function rules()
     {
         return [
-            'from' => 'string|max:255|required',
-            'services' => 'string|max:255',
-            'purposes' => 'string|required',
+            'from' => 'string|nullable',
+            'name' => 'string|nullable',
+            'email' => 'string|email',
+            'purposes' => 'string|nullable',
+            'services' => 'string|nullable',
             'files' => 'nullable',
             'files.*' => 'file|max:51200',
-            'files_description' => 'string|max:255|nullable',
-            'website' => 'string|max:255|nullable',
-            'deadline' => 'string|max:255|nullable',
-            'email' => 'string|max:255|email|required',
-            'phone' => 'string|nullable|regex:/^\+7\ \(\d{3}\)\ \d{3}\-\d{2}\-\d{2}$/',
-            'references' => 'string|max:255|nullable',
+            'files_description' => 'string|nullable',
+            'website' => 'string|nullable',
+            'deadline' => 'string|nullable',
+            'phone' => 'string|nullable',
+            'references' => 'string|nullable',
         ];
     }
 }
